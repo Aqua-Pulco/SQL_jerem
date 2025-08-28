@@ -23,10 +23,10 @@ app.use(cors());
 app.use(express.json());
 
 // Exemple de route GET sur /todos
-app.get("/todos", async (req, res) => {
+app.get("/backend", async (req, res) => {
     try {
         // On fait une requête SQL simple pour récupérer toutes les lignes de la table todos
-        const result = await pool.query("SELECT * FROM todos");
+        const result = await pool.query("SELECT * FROM backend");
 
         // On renvoie le résultat sous forme de tableau JSON
         res.json(result.rows);
